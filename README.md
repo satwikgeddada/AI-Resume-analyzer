@@ -60,7 +60,7 @@ An intelligent, AI-powered career assistant designed to bridge the gap between j
 ## ⚙️ Configuration
 In `backend/main.py`, ensure the `UPLOAD_DIR` points to an absolute path valid for your environment:
 ```python
-UPLOAD_DIR = "C:/Users/satwik/ai-resume-analyzer/backend/uploads"
+UPLOAD_DIR = "C:/Users/username/filename/backend/uploads"
 ```
 
 ---
