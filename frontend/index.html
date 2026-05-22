@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Resume Analyzer | Professional Career Insights</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+</div>
+
+<div class="container">
+
+<header>
+
+<div class="header-top">
+</div>
+
+<h1>AI Resume Analyzer</h1>
+
+</header>
+
+<main>
+
+<section id="upload-section" class="glass-card">
+
+<div class="upload-area" id="drop-zone">
+
+<div class="upload-icon">
+<i class="fas fa-cloud-upload-alt"></i>
+</div>
+
+<h3>Upload Resume</h3>
+
+<p>Drag & Drop or Click to browse (PDF, DOCX)</p>
+
+<input
+type="file"
+id="file-input"
+hidden
+accept=".pdf,.docx">
+
+</div>
+
+<div id="file-info" class="hidden">
+
+<p id="filename-display"></p>
+
+<textarea
+id="jd-input"
+placeholder="Paste Job Description here for targeted analysis..."
+class="glass-input"></textarea>
+
+<button
+id="analyze-btn"
+class="primary-btn">
+
+Analyze Resume
+
+</button>
+
+</div>
+
+<div id="loader" class="hidden">
+
+<div class="spinner"></div>
+
+<p>Analyzing with AI...</p>
+
+</div>
+
+<div id="error-message"
+class="error-box hidden">
+
+<span class="error-icon">⚠️</span>
+
+<p id="error-text"></p>
+
+<button
+id="error-close"
+class="secondary-btn small-btn">
+
+Try Again
+
+</button>
+
+</div>
+
+</section>
+
+
+<section id="results-section" class="hidden">
+
+<div class="results-grid">
+
+<div class="glass-card score-card">
+
+<h3>ATS Score</h3>
+
+<div class="chart-container">
+<canvas id="scoreChart"></canvas>
+</div>
+
+<h2 id="score-number">ATS Score - 0</h2>
+
+<p id="hiring-verdict" class="verdict"></p>
+
+</div>
+
+
+<div class="glass-card summary-card">
+
+<h3>Professional Summary</h3>
+
+<p id="summary-text"></p>
+
+</div>
+
+<div class="glass-card chart-card">
+
+<h3>Skills Balance</h3>
+
+<div class="chart-container">
+<canvas id="skillsRadarChart"></canvas>
+</div>
+
+</div>
+
+<div class="glass-card chart-card">
+
+<h3>Section Analysis</h3>
+
+<div class="chart-container">
+<canvas id="sectionBarChart"></canvas>
+</div>
+
+</div>
+
+<div class="glass-card skills-card">
+
+<h3>Detailed Skills Analysis</h3>
+
+<div class="skills-container">
+
+<h4>Current Skills</h4>
+<div id="current-skills" class="tag-cloud"></div>
+
+<h4>Missing Skills</h4>
+<div id="missing-skills" class="tag-cloud missing"></div>
+
+</div>
+
+</div>
+
+<div class="glass-card feedback-card">
+
+<h3>Analysis Insights</h3>
+
+<div class="feedback-split">
+
+<div class="strengths">
+<h4>Strengths</h4>
+<ul id="strengths-list"></ul>
+</div>
+
+<div class="weaknesses">
+<h4>Areas to Improve</h4>
+<ul id="weaknesses-list"></ul>
+</div>
+
+</div>
+</div>
+
+<div class="glass-card recommendations-card">
+<h3>Career Roadmap</h3>
+<div id="recommendations-container"></div>
+</div>
+
+<div class="glass-card presence-card">
+<h3>Online Presence Tips</h3>
+<p id="presence-tips"></p>
+</div>
+
+</div>
+
+<div class="action-footer">
+
+<button id="download-pdf-btn" class="primary-btn">
+Download PDF Report
+</button>
+
+<button id="save-summary-btn" class="secondary-btn">
+Save Summary (.txt)
+</button>
+
+<button id="reset-btn" class="secondary-btn">
+Analyze Another
+</button>
+
+</div>
+
+</section>
+
+</main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
