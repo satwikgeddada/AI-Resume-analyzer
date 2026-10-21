@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://ai-resume-analyzer-rw7k.onrender.com/";
 
 // DOM Elements
 const dropZone = document.getElementById('drop-zone');
