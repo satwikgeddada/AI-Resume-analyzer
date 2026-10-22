@@ -10,7 +10,7 @@ An AI-powered career assistant that helps job seekers get past Applicant Trackin
 ![JavaScript](https://img.shields.io/badge/Frontend-Vanilla%20JS-F7DF1E?logo=javascript&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-![Dashboard](docs/dashboard.png)
+[Dashboard](docs/dashboard.png)
 
 ## 🚀 Features
 
